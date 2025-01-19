@@ -1,6 +1,5 @@
 - name: "Variables from Prompt"
   hosts: web
-  connection: web
   tasks:
     - name: "Variables from prompt"
       ansible.builtin.debug:
