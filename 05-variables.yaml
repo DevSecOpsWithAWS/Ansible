@@ -1,7 +1,7 @@
 - name: variables
   hosts: local
   connection: local
-  var:
+  vars:
     NAME: "Chouda Reddy"
     COURSE: "DevSecOps with AWS"
   tasks:
