@@ -1,8 +1,8 @@
 - name: "Variables Preference Order"
   hosts: local
   connection: local
-  vars:
-    GREET: Play
+  #vars:
+  # GREET: Play
   vars_files:
     - courses.yaml
   #vars_prompt:
