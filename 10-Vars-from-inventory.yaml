@@ -1,0 +1,7 @@
+- name: "Variables from Prompt"
+  hosts: web
+  connection: web
+  tasks:
+    - name: "Variables from prompt"
+      ansible.builtin.debug:
+        msg: "This is {{ NAME }}, who is the part of {{ COURSE }} Batch"
