@@ -1,0 +1,12 @@
+- name: "Variables from Prompt"
+  hosts: local
+  connection: local
+  vars_prompt:
+    - name: NAME
+      prompt: "Enter your Name"
+    - name: COURSE
+      prompt: "Enter your Course"
+  tasks:
+    - name: "Variables from prompt"
+      ansible.builtin.debug:
+        msg: "This is {{ NAME }}, who is the part of {{ COURSE }} Batch"
