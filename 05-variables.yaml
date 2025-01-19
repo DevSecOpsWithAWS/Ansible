@@ -1,7 +1,10 @@
 - name: variables
   hosts: local
   connection: local
+  var:
+    NAME: "Chouda Reddy"
+    COURSE: "DevSecOps with AWS"
   tasks:
     - name: Print variables
       ansible.builtin.debug:
-        msg: "This is Chouda Reddy, how is the part of DevSecOps with AWS Batch"
+        msg: "This is {{ NAME }}, how is the part of {{ COURSE }} Batch"
