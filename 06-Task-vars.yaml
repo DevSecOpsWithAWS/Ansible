@@ -6,12 +6,12 @@
     COURSE: "DEVSECOPS with AWS"
   tasks:
     - name: Print Level-1 variables
-      vars:
+      vars: #local variables
         NAME: "SRILATHA"
         COURSE: ANSIBLE
       ansible.builtin.debug:
-        msg: "This is {{ NAME }}, how is the part of {{ COURSE }} Batch"
+        msg: "This is {{ NAME }}, who is the part of {{ COURSE }} Batch"
 
     - name: Print Level-2 variables
       ansible.builtin.debug:
-        msg: "This is {{ NAME }}, how is the part of {{ COURSE }} Batch"
+        msg: "This is {{ NAME }}, who is the part of {{ COURSE }} Batch"

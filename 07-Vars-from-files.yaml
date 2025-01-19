@@ -1,10 +1,9 @@
-- name: variables
+- name: "variables from files"
   hosts: local
   connection: local
   vars:
-    NAME: "Chouda Reddy"
-    COURSE: "DevSecOps with AWS"
+    - courses.yaml
   tasks:
-    - name: Print variables
+    - name: "Vars from Files"
       ansible.builtin.debug:
         msg: "This is {{ NAME }}, who is the part of {{ COURSE }} Batch"
