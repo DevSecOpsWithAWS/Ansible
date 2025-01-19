@@ -1,0 +1,17 @@
+- name: Task level variables
+  hosts: local
+  connection: local
+  vars:
+    NAME: "Chouda Reddy"
+    COURSE: "DEVSECOPS with AWS"
+  tasks:
+    - name: Print Level-1 variables
+      vars:
+        NAME: "SRILATHA"
+        COURSE: ANSIBLE
+      ansible.builtin.debug:
+        msg: "This is {{ NAME }}, how is the part of {{ COURSE }} Batch"
+
+    - name: Print Level-2 variables
+      ansible.builtin.debug:
+        msg: "This is {{ NAME }}, how is the part of {{ COURSE }} Batch"
