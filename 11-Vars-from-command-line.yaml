@@ -1,0 +1,7 @@
+- name: "Variables from Arguments"
+  hosts: local
+  connection: local
+  tasks:
+    - name: "Variables received from Arguments"
+      ansible.builtin.debug:
+        msg: "This is {{ NAME }}, who is the part of {{ COURSE }} Batch"
