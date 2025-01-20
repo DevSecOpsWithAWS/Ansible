@@ -1,0 +1,14 @@
+- name: "Installing Nginx"
+  hosts: web
+  become: yes
+  tasks:
+    - name: "Install Nginx if RHEL"
+      ansible.builtin.dnf:
+        name: nginx
+        state: installed
+      when: ansible_os_family == "RHEL"
+    - name: "Install Nginx if Ubantu"
+      ansible.builtin.apt:
+        name: nginx
+        state: installed
+      when: ansible_os_family == "Debian"
