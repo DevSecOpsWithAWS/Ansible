@@ -1,0 +1,13 @@
+- name: "Installing Packages"
+  hosts: web
+  become: yes
+  tasks:
+    - name: "Installing packages"
+      ansible.builtin.package:
+        name: "{{ item }}"
+        state: installed
+      loop:
+        - gcc
+        - mysql
+        - git
+        - zip
