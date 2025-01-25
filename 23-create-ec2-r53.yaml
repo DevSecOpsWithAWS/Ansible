@@ -50,7 +50,7 @@
       overwrite: true
     loop: "{{ ec2_info.results }}"
 
-  - name: Create private ip R53 records
+  - name: Create public ip R53 records
     amazon.aws.route53:
       state: present
       zone: "{{ zone }}"
